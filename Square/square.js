@@ -12,4 +12,15 @@ window.onload = function init() {
     if (!gl) {
         alert("WebGL isn't available");
     }
+
+    // four vertices
+
+    var vertices = [
+        -0.5, -0.5,
+        -0.5, 0.5,
+        0.5, 0.5,
+        0.5, -0.5
+    ];
+
+    // alternate var vertices = [vec2(-0.5, -0.5), vec2(-0.5, 0.5), vec2(0.5, 0.5), vec2(0.5, 0.5)];
 }
