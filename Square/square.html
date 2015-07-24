@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>WebGL Square</title>
+
     <script type="text/javascript" src="../Common/webgl-utils.js"></script>
     <script type="text/javascript" src="../Common/initShaders.js"></script>
     <script type="text/javascript" src="../Common/MV.js"></script>
     <script type="text/javascript" src="square.js"></script>
+
+    <script id="vertex-shader" type="x-shader/x-vertex">
+        attribute vec4 vPosition; // vertex position from application
+        void main() {
+            gl_Position = vPosition;
+        }
+    </script>
+
+    <script id="fragment-shader" type="x-shader/x-fragment">
+		precision mediump float;
+		void main() {
+			gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);    // white and opaque
+		}
+	</script>
 </head>
 <body>
 
