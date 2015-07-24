@@ -33,4 +33,10 @@ window.onload = function init() {
 
     var program = initShaders(gl, "vertex-shader", "fragment-shader");
     gl.useProgram(program);
+
+    // Load the data into the GPU
+
+    var bufferId = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, bufferId);
+    gl.bufferData(gl.ARRAY_BUFFER, flatten(vertices), gl.STATIC_DRAW);
 }
