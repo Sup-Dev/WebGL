@@ -20,6 +20,9 @@ window.onload = function init() {
     // Initialize three vertices of Triangle
     var vertices = [vec2(-1, -1), vec2(0, 1), vec2(1, -1)];
 
+    // Divide triangle
+    divideTriangle( vertices[0], vertices[1], vertices[2], NumTimesToSubdivide);
+
     // Configure WebGL
 
     gl.viewport(0, 0, canvas.width, canvas.height);
@@ -43,3 +46,8 @@ window.onload = function init() {
 
     render();
 }
+
+function triangle(a, b, c) {
+    points.push(a, b, c);
+}
+
