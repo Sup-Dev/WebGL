@@ -51,7 +51,7 @@ function triangle(a, b, c) {
     points.push(a, b, c);
 }
 
-function divideTriangle(a, b, b, count) {
+function divideTriangle(a, b, c, count) {
     // Base case of recursion
     if (count === 0) {
         triangle(a, b, c);
