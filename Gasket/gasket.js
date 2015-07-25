@@ -69,3 +69,8 @@ function divideTriangle(a, b, b, count) {
         divideTriangle(b, bc, ab, count);
     }
 }
+
+function render() {
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.drawArrays(gl.TRIANGLE_FAN, 0, points.length);
+}
