@@ -1,6 +1,7 @@
 /**
  * Created by Dev on 25-07-2015.
  */
+"use strict";
 
 var gl;
 
@@ -37,7 +38,7 @@ window.onload = function init() {
 
     var bufferId = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, bufferId);
-    gl.bufferData(gl.ARRAY_BUFFER, flatten(vertices), gl.STATIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, flatten(points), gl.STATIC_DRAW);
 
     // Associate shader variables with variables in JS file
     var vPosition = gl.getAttribLocation(program, "vPosition");
@@ -72,5 +73,5 @@ function divideTriangle(a, b, c, count) {
 
 function render() {
     gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.drawArrays(gl.TRIANGLE_FAN, 0, points.length);
+    gl.drawArrays(gl.TRIANGLES, 0, points.length);
 }
